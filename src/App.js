@@ -9,13 +9,15 @@ import { useState } from 'react';
 function App() {
   const [cardData, setCardData] = useState(
     {
-      number: '',
+      number: 0,
       holder: '',
       month: '',
-      // day:'',
-      // cvv:0
+      day: '',
+      cvv: ''
     }
   )
+
+  const [stateCard, setStateCard] = useState(false)
 
   const getValueForm = (data) => {
     setCardData(data)
@@ -23,13 +25,12 @@ function App() {
 
   return (
     <div className="App">
-
       <Container>
         <Row>
           <Col>
-            <Card cardInfo={cardData} />
+            <Card stateCard={stateCard} cardInfo={cardData} />
             <div className='card-form d-flex justify-content-center'>
-              <BasicForm data={cardData} getData={getValueForm} />
+              <BasicForm data={cardData} focusField={setStateCard} getData={getValueForm} />
             </div>
           </Col>
         </Row>

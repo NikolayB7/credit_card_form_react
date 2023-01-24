@@ -5,18 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(177.9deg, rgb(58, 62, 88) 3.6%, rgb(119, 127, 148) 105.8%);
+  background-image: linear-gradient(to bottom, #000000, #362e37, #595e75, #6a98b2, #7ed6df);
+  /* background-image: linear-gradient(177.9deg, #28313B 3.6%, #485461 105.8%); */
+  /* background-image: linear-gradient(to bottom, #14557b, #1f7392, #3891a5, #59b0b6, #7fcec5); */
   background-repeat: no-repeat;
   background-size: cover;
-  color: #60DE09;
+  color: #fff;
 }
 
 label {
-  color: #60DE09;
+  color: #fff;
 }
 
-html {
+html,
+body,
+#root {
   height: 100%;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 code {
